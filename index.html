@@ -11,6 +11,45 @@
         <title>trillo &mdash; Your all-in-one booking app</title>
     </head>
     <body>
-        
+        <div class="container">
+            <header class="header">
+                <img src="img/logo.png" alt="Trillo Logo" class="logo">
+                <form action="#" class="search">
+                    <input type="text" class="searchInput" placeholder="Seach Hotels">
+                    <button class="searchButton">
+                        <svg class="searchIcon">
+                            <use xlink:href = "img/sprite.svg#icon-magnifying-glass"></use>
+                        </svg>
+                    </button>
+                </form>
+                <nav class="userNav">
+                    <div class="userNavIconBox">
+                        <svg class="userNavIcon">
+                            <use xlink:href="img/sprite.svg#icon-bookmark"></use>
+                        </svg>
+                        <span class="userNavNotification">7</span>
+                    </div>
+                    <div class="userNavIconBox">
+                        <svg class="userNavIcon">
+                            <use xlink:href="img/sprite.svg#icon-chat"></use>
+                        </svg>
+                        <span class="userNavNotification">13</span>
+                    </div>
+                    <div class="userNavUser">
+                        <img src="img/user.jpg" alt="" class="userNavUserPhoto">
+                        <span class="userNavUsername">Alex</span>
+                    </div>
+                </nav>
+            </header>
+
+            <div class="content">
+                <nav class="sideBar">
+                    Navigation
+                </nav>
+                <main class="hotelView">
+                    Hotel View
+                </main>
+            </div>
+        </div>
     </body>
 </html>
