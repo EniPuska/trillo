@@ -42,8 +42,12 @@ body {
 
 .header {
   height: 7rem;
+  font-size: 1.4rem;
   background-color: #fff;
-  border-bottom: var(--color-grey-light-2); }
+  border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
 
 .content {
   display: flex; }
@@ -57,16 +61,78 @@ body {
   flex: 1; }
 
 .logo {
-  height: 3.25rem; }
+  height: 3.25rem;
+  margin-left: 2rem; }
 
-.searchIcon {
-  height: 2rem;
-  width: 2rem; }
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .searchInput {
+    width: 90%;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    color: inherit;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    transition: all .2s;
+    margin-right: -3.25rem; }
+    .searchInput:focus {
+      outline: 0;
+      width: 100%;
+      background-color: var(--color-grey-light-3); }
+    .searchInput::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
+  .searchInput:focus + .searchButton {
+    background-color: var(--color-grey-light-3); }
+  .searchButton {
+    border: none;
+    background-color: var(--color-grey-light-2); }
+    .searchButton:focus {
+      outline: none; }
+    .searchButton:active {
+      transform: translateY(2px); }
+  .searchIcon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-3); }
 
-.userNavIcon {
-  height: 2.25rem;
-  width: 2.25rem; }
-
-.userNavUserPhoto {
-  height: 3.75rem;
-  border-radius: 50%; }
+.userNav {
+  align-self: stretch;
+  display: flex;
+  align-items: center; }
+  .userNav > * {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%; }
+  .userNav > *:hover {
+    background-color: var(--color-grey-light-2); }
+  .userNavIconBox {
+    position: relative; }
+  .userNavIcon {
+    height: 2.25rem;
+    width: 2.25rem;
+    fill: var(--color-grey-dark-2); }
+  .userNavNotification {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    font-size: .8rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .userNavUserPhoto {
+    height: 3.75rem;
+    border-radius: 50%;
+    margin-right: 1rem; }
