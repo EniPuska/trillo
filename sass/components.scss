@@ -119,11 +119,24 @@
     font-size: 1.4rem;
     list-style: none;
     margin-top: 3.5rem;
+    
+    @media only screen and (max-width: $breakpoint-medium) {
+        display: flex;
+        margin:0;
+    }
+
     &Item {
         position: relative;
         
         &:not(:last-child) {
             margin-bottom: .5rem;
+            @media only screen and (max-width: $breakpoint-medium) {
+                margin:0;
+            }
+        }
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            flex: 1;
         }
     }
 
@@ -162,6 +175,16 @@
         align-items: center;
         position: relative;
         z-index: 10;
+
+        @media only screen and (max-width: $breakpoint-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
     }
 
     &Icon {
@@ -169,6 +192,13 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @media only screen and (max-width: $breakpoint-small) {
+            margin-right: 0;
+            margin-bottom: 7px;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
@@ -178,6 +208,10 @@
     text-align: center;
     color: var(--color-grey-light-4);
     padding: 2.5rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        display: none;
+    }
 }
 
 
@@ -209,6 +243,11 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+
+        @media only screen and (max-width: $breakpoint-small) {
+            font-size: 1.8rem;
+            padding: 1.25rem 2rem;
+        }
     }
 
     &Stars {
@@ -242,17 +281,55 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+
+        @media only screen and (max-width: $breakpoint-small) {
+           padding: 0 1.5rem;
+        }
     }
 
     &RatingCount {
         font-size: .8rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $breakpoint-small) {
+            font-size: .5rem
+        }
     }
 
     &RatingAverage {
         font-size: 2.25rem;
         font-weight: 300;
         margin-bottom: -3px;
+
+        @media only screen and (max-width: $breakpoint-small) {
+            font-size: 1.8rem
+        }
+    }
+}
+
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    display: flex;
+    align-items: center;
+
+    &Photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        &:not(:last-child) {
+            margin-right: -2rem;
+        }
+    }
+
+    &Friends {
+        display: flex;
+    }
+
+    &Count {
+        margin-right: auto;
     }
 }
 
@@ -317,6 +394,11 @@
     position: relative;
     overflow: hidden;
 
+    @media only screen and (max-width: $breakpoint-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
     &Text {
         margin-bottom: 2rem;
         z-index: 10;
@@ -376,6 +458,10 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+        padding: 2.5rem 0;
+    }
 
     &BookNow {
         font-size: 2rem;
